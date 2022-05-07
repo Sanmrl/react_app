@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./Componentes/NavBar";
 import ItemListContainer from "./Componentes/ItemsListContainer";
+import ProdContainer from "./Componentes/ProdContainer";
 
 function App() {
   return (

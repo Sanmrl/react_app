@@ -1,32 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router";
+import itemsData from "./Componentes/ItemsData";
+import listCard from "./Componentes/listCard";
 import NavBar from "./Componentes/NavBar";
-import ItemListContainer from "./Componentes/ItemsListContainer";
-import ProdContainer from "./Componentes/ProdContainer";
+import "./App.css";
+import ItemsListContainer from "./Componentes/itemsListContainer";
+import RemeraDetail from "./Componentes/RemeraDetail";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar></NavBar>
-      <ItemListContainer greeting={"Bienvenidos"}></ItemListContainer>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    </>
+
+      <Routes>
+        <Route path="/Items" element={<ItemsListContainer />} />
+        <Route path="/Remera/:RemeraId" element={<RemeraDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

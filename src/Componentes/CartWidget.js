@@ -1,7 +1,6 @@
 import React from "react";
-import Imagen from "./Imagen";
-const CartWidget = () => {
-  return <div></div>;
-};
 
+const CartWidget = () => {
+  return <div>CartWidget</div>;
+};
 export default CartWidget;
